@@ -17,6 +17,8 @@ class CalculadoraTest {
 
         // validando o resultado da chamada do soma
         assertEquals(3.1,resultado);
+        assertNotEquals(0,resultado);
+        assertNull(null);
     }
 
     @Test
