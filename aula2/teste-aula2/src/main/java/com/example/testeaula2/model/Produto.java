@@ -1,6 +1,7 @@
 package com.example.testeaula2.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @Data
 @Table(name = "produto")
 @NoArgsConstructor // por padrão as entities precisam de um construtor vazio, por causa do Spring
+@AllArgsConstructor
 public class Produto {
 
     @Id
