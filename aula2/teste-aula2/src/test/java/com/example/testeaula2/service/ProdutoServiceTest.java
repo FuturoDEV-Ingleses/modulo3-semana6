@@ -87,6 +87,14 @@ class ProdutoServiceTest {
 
         verify(produtoRepository).save(any());
         verify(produtoRepository).findById(anyLong());
+    }
+
+    @Test
+    void deletarProduto(){
+        doNothing().when(produtoRepository).deleteById(anyLong());
+        produtoService.deletaProduto(1l);
+
+        verify(produtoRepository).deleteById(anyLong());
 
     }
 }

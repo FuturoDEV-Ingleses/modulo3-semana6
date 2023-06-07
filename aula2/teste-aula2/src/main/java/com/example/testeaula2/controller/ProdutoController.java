@@ -41,4 +41,12 @@ public class ProdutoController {
         return new ResponseEntity<>(produtoResposta, HttpStatus.CREATED);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deletaProduto(
+            @PathVariable("id") Long id) {
+        produtoService.deletaProduto(id);
+
+        return new ResponseEntity<>("Ok", HttpStatus.NO_CONTENT);
+    }
+
 }
