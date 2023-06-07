@@ -37,4 +37,12 @@ public class ProdutoService {
                 )
         );
     }
+
+    public Produto atualizaProduto(ProdutoDto produtoDto, Long id) {
+        Produto produto = produtoRepository.findById(id).orElse(null);
+        produto.setNomeProduto(produtoDto.getNomeProduto());
+        produto.setValorProduto(produtoDto.getValorProduto());
+
+        return produtoRepository.save(produto);
+    }
 }

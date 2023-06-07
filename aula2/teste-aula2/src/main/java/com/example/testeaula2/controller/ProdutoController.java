@@ -33,4 +33,12 @@ public class ProdutoController {
         return new ResponseEntity<>(produtoResposta, HttpStatus.CREATED);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Produto> atualizaProduto(@RequestBody ProdutoDto produtoDto,
+                                                   @PathVariable("id") Long id) {
+        Produto produtoResposta = produtoService.atualizaProduto(produtoDto, id);
+
+        return new ResponseEntity<>(produtoResposta, HttpStatus.CREATED);
+    }
+
 }
