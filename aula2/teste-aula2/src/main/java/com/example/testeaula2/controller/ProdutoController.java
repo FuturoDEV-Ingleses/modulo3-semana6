@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController // cria um controller
 @RequestMapping("/produtos") // sempre que chamar o /produto vamos entrar nessa classe
+// endpoint /produtos
 public class ProdutoController {
 
     private final ProdutoService produtoService;
